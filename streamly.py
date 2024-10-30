@@ -1,9 +1,4 @@
 import streamlit as st
-import logging
-import time
-import json
-import requests
-import base64
 import pandas as pd
 import PyPDF2  # Import this for PDF reading
 
