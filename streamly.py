@@ -4,7 +4,6 @@ import time
 import json
 import requests
 import base64
-from openai import OpenAI, OpenAIError
 import pandas as pd
 import PyPDF2  # Import this for PDF reading
 
