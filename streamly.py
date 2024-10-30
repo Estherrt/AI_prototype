@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import PyPDF2  # Import this for PDF reading
+#import PyPDF2  # Import this for PDF reading
 
 # Streamlit Page Configuration
 st.set_page_config(
@@ -47,7 +47,7 @@ def run_ai_algorithm(text):
     return result
 
 # PDF Upload
-def main():
+def m():
     uploaded_pdf = st.file_uploader("Upload a PDF file", type="pdf")
 
     if uploaded_pdf is not None:
@@ -66,6 +66,9 @@ def main():
         # Display AI-generated output
         st.subheader("AI-Generated Output")
         st.write(output)
+
+def main():
+    print("Hi")
 
 if __name__ == "__main__":
     main()
