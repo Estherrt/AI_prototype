@@ -54,24 +54,25 @@ def run_ai_algorithm(text):
     return result
 
 # PDF Upload
-uploaded_pdf = st.file_uploader("Upload a PDF file", type="pdf")
+def main():
+    uploaded_pdf = st.file_uploader("Upload a PDF file", type="pdf")
 
-if uploaded_pdf is not None:
-    # Extract text from PDF
-    st.info("Extracting text from PDF...")
-    extracted_text = extract_text_from_pdf(uploaded_pdf)
-    
-    # Display extracted text (optional, for debugging)
-    with st.expander("Extracted Text"):
-        st.write(extracted_text)
-    
-    # Run AI algorithm on extracted text
-    st.info("Running AI algorithm...")
-    output = run_ai_algorithm(extracted_text)
-    
-    # Display AI-generated output
-    st.subheader("AI-Generated Output")
-    st.write(output)
+    if uploaded_pdf is not None:
+        # Extract text from PDF
+        st.info("Extracting text from PDF...")
+        extracted_text = extract_text_from_pdf(uploaded_pdf)
+        
+        # Display extracted text (optional, for debugging)
+        with st.expander("Extracted Text"):
+            st.write(extracted_text)
+        
+        # Run AI algorithm on extracted text
+        st.info("Running AI algorithm...")
+        output = run_ai_algorithm(extracted_text)
+        
+        # Display AI-generated output
+        st.subheader("AI-Generated Output")
+        st.write(output)
 
 if __name__ == "__main__":
-    st.info("Waiting for PDF upload...")
+    main()
